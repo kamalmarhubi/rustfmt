@@ -12,6 +12,7 @@ include = ["src/*.rs", "Cargo.toml"]
 [features]
 default = ["cargo-fmt"]
 cargo-fmt = []
+new-cli = ["clap"]
 
 [dependencies]
 toml = "0.1"
@@ -27,6 +28,7 @@ env_logger = "0.3"
 getopts = "0.2"
 itertools = "0.4.15"
 multimap = "0.3"
+clap = { version = "2.5.2", optional = true }
 
 [target.'cfg(unix)'.dependencies]
 libc = "0.2.11"
